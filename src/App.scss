@@ -1,0 +1,109 @@
+@use "./styles/partials/typography";
+@use "./styles/partials/mixins";
+@use "./styles/partials/colors";
+@use "sass:map";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Avenir Next Pro";
+}
+a {
+  font-size: 0.812rem;
+  color: map.get(colors.$primary-colors, "white");
+  text-decoration: none;
+  @include mixins.tablet {
+    font-size: 0.875rem;
+  }
+}
+
+ul li {
+  list-style-type: none;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  @include mixins.tablet {
+    font-size: 3.75rem;
+  }
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  @include mixins.tablet {
+    font-size: 2.25rem;
+  }
+}
+h3,
+q {
+  font-size: 0.875rem;
+  font-weight: 600;
+  @include mixins.tablet {
+    font-size: 1.45rem;
+  }
+}
+p {
+  font-size: 0.812rem;
+  font-weight: 400;
+  @include mixins.tablet {
+    font-size: 0.875rem;
+  }
+}
+label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: map.get(colors.$primary-colors, "silver");
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+input[type="text"],
+textarea[type="text"],
+input[type="search"] {
+  font-family: "Avenir Next", "Avenir Next Pro";
+  border-radius: 4px;
+  border: 1px solid map.get(colors.$secondary-colors, "mercury");
+  &:focus {
+    outline: none;
+    border: 2px solid map.get(colors.$primary-colors, "brainflix-blue");
+  }
+  &:active {
+    outline: none;
+    border: 2px solid map.get(colors.$primary-colors, "brainflix-blue");
+  }
+  @include mixins.tablet {
+    padding: 1rem;
+  }
+}
+
+button {
+  height: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  background-color: map.get(colors.$primary-colors, "brainflix-blue");
+  color: map.get(colors.$primary-colors, "white");
+  border-radius: 4px;
+  &:hover {
+    background-color: map.get(colors.$secondary-colors, "brainflix-darkblue");
+  }
+  @include mixins.tablet {
+    width: 10rem;
+    min-width: 9rem;
+    margin-left: auto;
+  }
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: map.get(colors.$primary-colors, "brainflix-black");
+  opacity: 1; /* Firefox */
+}
