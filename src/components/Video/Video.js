@@ -1,14 +1,15 @@
 import React from "react";
+import "./Video.scss";
 
 const Video = ({ title, image, channel }) => {
   console.log(title, image, channel);
   return (
     <>
-      <div>
-        <img src={image}></img>
+      <div className="video-card">
+        <img src={image} className="video-card__image"></img>
         <div>
-          <h1>{title}</h1>
-          <p>{channel}</p>
+          <h3 className="video-card__title">{title}</h3>
+          <p className="video-card__content">{channel}</p>
         </div>
       </div>
     </>

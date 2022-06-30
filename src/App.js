@@ -13,7 +13,7 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        {/* <Videos videos={this.state.videos} /> */}
+        <Videos videos={this.state.videos} />
       </>
     );
   }

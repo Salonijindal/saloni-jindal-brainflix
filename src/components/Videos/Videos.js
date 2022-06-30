@@ -1,9 +1,10 @@
 import React from "react";
 import Video from "../Video/Video";
+import "./Videos.scss";
 const Videos = (props) => {
   console.log(props);
   return (
-    <ul>
+    <>
       {props.videos.map((video) => {
         return (
           <Video
@@ -13,7 +14,7 @@ const Videos = (props) => {
           />
         );
       })}
-    </ul>
+    </>
   );
 };
 
