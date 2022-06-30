@@ -3,10 +3,9 @@
 @use "sass:map";
 .video-card {
   display: flex;
-  padding: 1rem;
-  row-gap: 1rem;
+  padding: 0.25rem 1rem;
   column-gap: 1rem;
-  height: 6rem;
+  height: 5rem;
   &__image {
     background-color: map.get(colors.$primary-colors, "mercury");
     width: 30%;
