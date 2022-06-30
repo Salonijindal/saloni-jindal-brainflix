@@ -1,3 +1,7 @@
 @use "../../App.scss";
 @use "../../styles/partials/colors";
 @use "sass:map";
+
+ul {
+  padding: 0;
+}
