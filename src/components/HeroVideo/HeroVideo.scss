@@ -5,9 +5,18 @@
 .hero-section {
   display: flex;
   flex-direction: column;
-  padding: 1rem 1rem 0;
   &__video {
     height: 30vh;
+    min-height: 200px;
     width: 100%;
+    background-color: map.get(colors.$secondary-colors, "brainflix-darkblack");
+  }
+  &__description {
+    padding: 1.5rem 1rem 0;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
   }
 }

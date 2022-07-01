@@ -107,3 +107,8 @@ button {
   color: map.get(colors.$primary-colors, "brainflix-black");
   opacity: 1; /* Firefox */
 }
+
+hr {
+  border: 1px solid map.get(colors.$secondary-colors, "mercury");
+  margin-bottom: 1rem;
+}
