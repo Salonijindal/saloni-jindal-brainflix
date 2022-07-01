@@ -4,11 +4,13 @@ import "./Video.scss";
 const Video = ({ title, image, channel }) => {
   console.log(title, image, channel);
   return (
-    <li className="video-card">
-      <img src={image} className="video-card__image"></img>
+    <li className="video-section__card">
       <div>
-        <h3 className="video-card__title">{title}</h3>
-        <p className="video-card__content">{channel}</p>
+        <img src={image} className="video-section__image"></img>
+      </div>
+      <div className="video-section__description">
+        <h3 className="video-section__title">{title}</h3>
+        <p className="video-section__content">{channel}</p>
       </div>
     </li>
   );

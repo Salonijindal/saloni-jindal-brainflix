@@ -39,18 +39,17 @@ h1 {
   }
 }
 h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  @include mixins.tablet {
-    font-size: 2.25rem;
-  }
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: map.get(colors.$primary-colors, "silver");
 }
 h3,
 q {
-  font-size: 0.875rem;
+  font-size: 0.812rem;
   font-weight: 600;
   @include mixins.tablet {
-    font-size: 1.45rem;
+    font-size: 0.875rem;
   }
 }
 p {
@@ -61,7 +60,7 @@ p {
   }
 }
 label {
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: map.get(colors.$primary-colors, "silver");
   margin-bottom: 4px;
