@@ -1,0 +1,13 @@
+@use "../../App.scss";
+@use "../../styles/partials/colors";
+@use "sass:map";
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 0;
+  &__video {
+    height: 30vh;
+    width: 100%;
+  }
+}

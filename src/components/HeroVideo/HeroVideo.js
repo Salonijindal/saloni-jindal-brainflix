@@ -4,7 +4,7 @@ const HeroVideo = () => {
   return (
     <div className="hero-section">
       <video
-        className=""
+        className="hero-section__video"
         poster="https://i.imgur.com/l2Xfgpl.jpg"
         controls
       ></video>
