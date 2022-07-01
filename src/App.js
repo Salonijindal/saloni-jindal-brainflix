@@ -4,6 +4,7 @@ import "./App.scss";
 import videoData from "./data/videos.json";
 import videoDetialsData from "./data/video-details.json";
 import Videos from "./components/Videos/Videos";
+import HeroVideo from "./components/HeroVideo/HeroVideo";
 
 class App extends React.Component {
   state = {
@@ -13,6 +14,7 @@ class App extends React.Component {
     return (
       <>
         <Header />
+        <HeroVideo />
         <Videos videos={this.state.videos} />
       </>
     );
