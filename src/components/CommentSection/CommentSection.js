@@ -2,7 +2,8 @@ import React from "react";
 import Avatar from "../../assets/images/mohan-muruge.jpg";
 import "./CommentSection.scss";
 
-const CommentSection = () => {
+const CommentSection = (props) => {
+  console.log(props);
   return (
     <section class="comment-section">
       <h3>3 Comments</h3>
