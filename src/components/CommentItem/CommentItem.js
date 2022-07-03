@@ -8,10 +8,7 @@ const CommentItem = (props) => {
     return fulldate;
   }
   return (
-    <li
-      id="223d9fb5-d42f-491c-bfe3-e7f9c8887f22"
-      className="comment-section__item"
-    >
+    <li className="comment-section__item">
       <div>
         <img className="comment-section__image"></img>
       </div>
