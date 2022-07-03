@@ -3,10 +3,10 @@ import logo from "../../assets/logo/brainflix-logo.svg";
 import avatar from "../../assets/images/mohan-muruge.jpg";
 import searchIcon from "../../assets/icons/search.svg";
 import "./Header.scss";
-
+import upload from "../../assets/icons/upload.svg";
 const Header = () => {
   return (
-    <header className="nav-bar">
+    <header className="nav-bar nav-bar--wrapper">
       <a>
         <img className="nav-bar__logo" src={logo} alt="BrainFlix logo" />
       </a>
@@ -26,7 +26,16 @@ const Header = () => {
           src={avatar}
           alt="BrainFlix User Avatar"
         />
-        <button className="nav-bar__btn">upload</button>
+        <div className="nav-bar__button nav-bar__button--wrapper">
+          <img className="nav-bar__upload" src={upload} alt="Upload Icon" />
+          <input
+            type="button"
+            id="upload"
+            className="nav-bar__upload-input"
+            name="upload"
+            value="upload"
+          />
+        </div>
       </div>
     </header>
   );

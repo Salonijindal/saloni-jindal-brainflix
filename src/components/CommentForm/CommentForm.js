@@ -28,15 +28,15 @@ const CommentForm = () => {
         </div>
         <div className="comment-section__button comment-section__button--wrapper">
           <img
-            className="comment-section__search"
+            className="comment-section__comment"
             src={AddComment}
             alt="Add Comment Icon"
           />
           <input
             type="button"
-            id="gsearch"
-            className="comment-section__search-input"
-            name="gsearch"
+            id="comment"
+            className="comment-section__comment-input"
+            name="comment"
             value="Comment"
           />
         </div>
