@@ -1,5 +1,7 @@
 import React from "react";
 import "./HeroVideo.scss";
+import viewsIcon from "../../assets/icons/views.svg";
+import likesIcon from "../../assets/icons/likes.svg";
 
 const HeroVideo = (props) => {
   return (
@@ -13,8 +15,16 @@ const HeroVideo = (props) => {
               <h2>07/11/2021</h2>
             </div>
             <div className="hero-section__info">
-              <h2>{props.selectedVideo.views}</h2>
-              <h2>{props.selectedVideo.likes}</h2>
+              <div className="hero-section__views">
+                <img src={viewsIcon} alt="Views Icon"></img>
+                <h2 className="hero-section__views">
+                  {props.selectedVideo.views}
+                </h2>
+              </div>
+              <div className="hero-section__likes">
+                <img src={likesIcon} alt="Views Icon"></img>
+                <h2>{props.selectedVideo.likes}</h2>
+              </div>
             </div>
           </div>
           <hr></hr>

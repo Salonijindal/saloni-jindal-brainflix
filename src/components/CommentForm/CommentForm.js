@@ -1,6 +1,6 @@
 import React from "react";
-import Avatar from "../../assets/images/mohan-muruge.jpg";
-import AddComment from "../../assets/icons/add_comment.svg";
+import avatar from "../../assets/images/mohan-muruge.jpg";
+import addComment from "../../assets/icons/add_comment.svg";
 
 const CommentForm = () => {
   const handleSubmit = (e) => {
@@ -9,7 +9,7 @@ const CommentForm = () => {
   };
   return (
     <div className="comment-section__container">
-      <img className="comment-section__avatar" src={Avatar} alt="User Avatar" />
+      <img className="comment-section__avatar" src={avatar} alt="User Avatar" />
       <form
         id="comment-section__form"
         className="comment-section__form"
@@ -29,7 +29,7 @@ const CommentForm = () => {
         <div className="comment-section__button comment-section__button--wrapper">
           <img
             className="comment-section__comment"
-            src={AddComment}
+            src={addComment}
             alt="Add Comment Icon"
           />
           <input

@@ -55,6 +55,18 @@
       margin-bottom: 0;
     }
   }
+  &__views {
+    display: flex;
+    column-gap: 0.5rem;
+  }
+  &__likes {
+    display: flex;
+    column-gap: 0.5rem;
+  }
+  // &__views::before {
+  //   content: url("../../assets/icons/views.svg");
+  //   padding-right: 10px;
+  // }
   &__description-container {
     padding-right: 0;
     @include mixins.desktop {
