@@ -12,16 +12,53 @@
     min-height: 200px;
     width: 100%;
     background-color: map.get(colors.$secondary-colors, "brainflix-darkblack");
+    @include mixins.tablet {
+      height: 50vh;
+      min-height: 400px;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 6rem;
+    border-top: 1px solid map.get(colors.$secondary-colors, "mercury");
+    margin-top: 1rem;
+    padding-top: 1rem;
+    @include mixins.tablet {
+      align-items: center;
+      justify-content: space-between;
+      border-top: 0;
+    }
+    @include mixins.desktop {
+      padding-right: 1.5rem;
+    }
   }
   &__description {
     padding: 1.5rem 1rem 0;
+    @include mixins.tablet {
+      padding: 1rem 2rem 0;
+    }
     @include mixins.desktop {
-      padding-left: 0;
+      padding: 1rem 0 0 0;
     }
   }
   &__info {
     display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
     justify-content: space-between;
     margin-bottom: 1rem;
+    @include mixins.tablet {
+      flex-direction: row;
+      align-items: baseline;
+      column-gap: 2rem;
+      margin-bottom: 0;
+    }
+  }
+  &__description-container {
+    padding-right: 0;
+    @include mixins.desktop {
+      padding-right: 1.5rem;
+    }
   }
 }

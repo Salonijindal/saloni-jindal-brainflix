@@ -115,8 +115,13 @@ input[type="button"] {
 }
 
 hr {
-  border: 1px solid map.get(colors.$secondary-colors, "mercury");
-  margin: 1rem 0;
+  border-bottom: 1px solid map.get(colors.$secondary-colors, "mercury");
+  border-bottom-width: 0;
+  opacity: 50%;
+  margin-bottom: 1rem;
+  @include mixins.tablet {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .main-section {

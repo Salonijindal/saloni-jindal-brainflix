@@ -156,7 +156,7 @@
     color: map.get(colors.$primary-colors, "silver");
   }
   @include mixins.tablet {
-    padding: 3rem 2.25rem 1rem;
+    padding: 2rem 2.25rem 1rem;
   }
   @include mixins.desktop {
     padding: 3rem 0 1rem;
