@@ -4,11 +4,11 @@ import CommentList from "../CommentList/CommentList";
 import "./CommentSection.scss";
 
 const CommentSection = (props) => {
-  console.log(props);
+  const commentLength = props.comment.length;
   return (
-    <section class="comment-section">
-      <h3>3 Comments</h3>
-      <div class="comment-section__panel">
+    <section className="comment-section">
+      <h3>{commentLength} Comments</h3>
+      <div className="comment-section__panel">
         <CommentForm />
         <CommentList commentList={props} />
       </div>

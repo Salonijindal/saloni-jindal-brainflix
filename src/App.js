@@ -6,7 +6,6 @@ import videoDetialsData from "./data/video-details.json";
 import Videos from "./components/Videos/Videos";
 import HeroVideo from "./components/HeroVideo/HeroVideo";
 import CommentSection from "./components/CommentSection/CommentSection";
-import Video from "./components/Video/Video";
 
 class App extends React.Component {
   state = {
@@ -25,11 +24,15 @@ class App extends React.Component {
     const filteredVideos = this.state.videos.filter(
       (video) => video.id !== this.state.currentVideo.id
     );
+    console.log(this.state.currentVideo);
     return (
       <>
         <Header />
         <HeroVideo selectedVideo={this.state.currentVideo} />
-        <CommentSection comment={this.state.currentVideo.comments} />
+        <CommentSection
+          comment={this.state.currentVideo.comments}
+          id={this.state.currentVideo.id}
+        />
         <Videos videos={filteredVideos} onClick={this.handleClick} />
       </>
     );
