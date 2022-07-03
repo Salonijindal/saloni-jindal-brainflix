@@ -1,10 +1,12 @@
 @use "../../App.scss";
 @use "../../styles/partials/colors";
+@use "../../styles/partials/mixins";
 @use "sass:map";
 
 .hero-section {
   display: flex;
   flex-direction: column;
+  border: 0;
   &__video {
     height: 30vh;
     min-height: 200px;
@@ -13,6 +15,9 @@
   }
   &__description {
     padding: 1.5rem 1rem 0;
+    @include mixins.desktop {
+      padding-left: 0;
+    }
   }
   &__info {
     display: flex;

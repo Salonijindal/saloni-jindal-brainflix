@@ -6,6 +6,7 @@ import videoDetialsData from "./data/video-details.json";
 import Videos from "./components/Videos/Videos";
 import HeroVideo from "./components/HeroVideo/HeroVideo";
 import CommentSection from "./components/CommentSection/CommentSection";
+import MainVideo from "./components/MainVideo/MainVideo";
 
 class App extends React.Component {
   state = {
@@ -28,12 +29,17 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <HeroVideo selectedVideo={this.state.currentVideo} />
-        <CommentSection
-          comment={this.state.currentVideo.comments}
-          id={this.state.currentVideo.id}
-        />
-        <Videos videos={filteredVideos} onClick={this.handleClick} />
+        <MainVideo currentVideo={this.state.currentVideo.image} />
+        <div className="main-section__container main-section__container--wrapper">
+          <div className="main-section__panel">
+            <HeroVideo selectedVideo={this.state.currentVideo} />
+            <CommentSection
+              comment={this.state.currentVideo.comments}
+              id={this.state.currentVideo.id}
+            />
+          </div>
+          <Videos videos={filteredVideos} onClick={this.handleClick} />
+        </div>
       </>
     );
   }

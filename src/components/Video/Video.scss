@@ -1,5 +1,6 @@
 @use "../../App.scss";
 @use "../../styles/partials/colors";
+@use "../../styles/partials/mixins";
 @use "sass:map";
 .video-section {
   &__card {
@@ -13,6 +14,9 @@
     display: flex;
     width: 100%;
     column-gap: 1rem;
+    @include mixins.desktop {
+      height: 4.8rem;
+    }
   }
 
   &__image {
@@ -22,6 +26,9 @@
     background-size: cover;
     background-position: center;
     border-radius: 4px;
+    @include mixins.desktop {
+      height: 4.8rem;
+    }
   }
   &__description {
     display: flex;

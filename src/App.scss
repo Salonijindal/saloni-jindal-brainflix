@@ -35,7 +35,10 @@ h1 {
   font-size: 1.5rem;
   font-weight: 600;
   @include mixins.tablet {
-    font-size: 3.75rem;
+    font-size: 2.0625rem;
+  }
+  @include mixins.desktop {
+    font-size: 2.0625rem;
   }
 }
 h2 {
@@ -56,6 +59,9 @@ p {
   font-size: 0.812rem;
   font-weight: 400;
   @include mixins.tablet {
+    font-size: 0.875rem;
+  }
+  @include mixins.desktop {
     font-size: 0.875rem;
   }
 }
@@ -111,4 +117,27 @@ input[type="button"] {
 hr {
   border: 1px solid map.get(colors.$secondary-colors, "mercury");
   margin: 1rem 0;
+}
+
+.main-section {
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.desktop {
+      flex-direction: row;
+      &--wrapper {
+        max-width: 1050px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__panel {
+    @include mixins.desktop {
+      flex-direction: row;
+      width: 70%;
+      border-right: 1px solid map.get(colors.$secondary-colors, "mercury");
+    }
+  }
 }

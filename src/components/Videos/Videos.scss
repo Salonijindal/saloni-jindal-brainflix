@@ -11,7 +11,13 @@ ul {
   display: flex;
   flex-direction: column;
   padding: 0.5rem 1rem;
+  width: 100%;
   @include mixins.tablet {
     padding: 0 2.25rem 0.5rem 2.25rem;
+    width: 60%;
+  }
+  @include mixins.desktop {
+    padding: 2rem 0 0.5rem 1.5rem;
+    width: 35%;
   }
 }
