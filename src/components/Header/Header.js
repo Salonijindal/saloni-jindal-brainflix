@@ -12,11 +12,7 @@ const Header = () => {
       </a>
       <div className="nav-bar__list">
         <div className="nav-bar__panel nav-bar__panel--wrapper">
-          <img
-            className="nav-bar__search"
-            src={searchIcon}
-            alt="BrainFlix logo"
-          />
+          <img className="nav-bar__search" src={searchIcon} alt="Search Icon" />
           <input
             type="search"
             id="gsearch"

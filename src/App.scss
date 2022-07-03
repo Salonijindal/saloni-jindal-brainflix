@@ -69,8 +69,10 @@ label {
 input[type="text"],
 textarea[type="text"],
 input[type="search"] {
+  font-size: 0.75rem;
   font-family: "Avenir Next", "Avenir Next Pro";
   border-radius: 4px;
+  overflow-y: hidden;
   border: 1px solid map.get(colors.$secondary-colors, "mercury");
   &:focus {
     outline: none;
@@ -80,13 +82,12 @@ input[type="search"] {
     outline: none;
     border: 2px solid map.get(colors.$primary-colors, "brainflix-blue");
   }
-  @include mixins.tablet {
-    padding: 1rem;
-  }
 }
 
-button {
-  height: 2.5rem;
+input[type="button"] {
+  font-size: 0.75rem;
+  height: 40px;
+  width: 100%;
   text-align: center;
   text-transform: uppercase;
   border: none;
@@ -97,9 +98,8 @@ button {
     background-color: map.get(colors.$secondary-colors, "brainflix-darkblue");
   }
   @include mixins.tablet {
-    width: 10rem;
-    min-width: 9rem;
-    margin-left: auto;
+    width: 9.5rem;
+    min-width: 9.375rem;
   }
 }
 ::placeholder {

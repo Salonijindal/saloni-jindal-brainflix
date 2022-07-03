@@ -1,5 +1,6 @@
 import React from "react";
 import Avatar from "../../assets/images/mohan-muruge.jpg";
+import AddComment from "../../assets/icons/add_comment.svg";
 
 const CommentForm = () => {
   const handleSubmit = (e) => {
@@ -19,13 +20,26 @@ const CommentForm = () => {
           <textarea
             className="comment-section__textarea"
             id="comment"
-            rows="5"
             type="text"
+            row="1"
             name="comment"
             placeholder="Add a new comment"
           ></textarea>
         </div>
-        <button>Comment</button>
+        <div className="comment-section__button comment-section__button--wrapper">
+          <img
+            className="comment-section__search"
+            src={AddComment}
+            alt="Add Comment Icon"
+          />
+          <input
+            type="button"
+            id="gsearch"
+            className="comment-section__search-input"
+            name="gsearch"
+            value="Comment"
+          />
+        </div>
       </form>
     </div>
   );
