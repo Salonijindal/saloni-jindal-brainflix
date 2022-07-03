@@ -1,6 +1,7 @@
 @use "../../App.scss";
 @use "../../styles/partials/colors";
 @use "sass:map";
+@use "../../styles/partials/mixins";
 
 ul {
   padding: 0;
@@ -10,4 +11,7 @@ ul {
   display: flex;
   flex-direction: column;
   padding: 0.5rem 1rem;
+  @include mixins.tablet {
+    padding: 0 2.25rem 0.5rem 2.25rem;
+  }
 }
