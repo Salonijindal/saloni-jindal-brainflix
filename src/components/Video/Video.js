@@ -14,7 +14,11 @@ const Video = ({ id, title, image, channel, onClick }) => {
         className="video-section__link"
       >
         <div>
-          <img src={image} className="video-section__image"></img>
+          <img
+            src={image}
+            className="video-section__image"
+            alt={`${title}: Music Image`}
+          ></img>
         </div>
         <div className="video-section__description">
           <h3 className="video-section__title">{title}</h3>
