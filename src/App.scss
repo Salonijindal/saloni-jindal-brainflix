@@ -47,8 +47,7 @@ h2 {
   text-transform: uppercase;
   color: colors.$primaryColor;
 }
-h3,
-q {
+h3 {
   font-size: 0.812rem;
   font-weight: 600;
   @include mixins.tablet {
