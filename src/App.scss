@@ -10,11 +10,11 @@
 }
 body {
   margin: 0;
-  font-family: "Avenir Next", "Avenir Next Pro";
+  font-family: "Avenir Next", "San Seriff";
 }
 a {
   font-size: 0.812rem;
-  color: map.get(colors.$primary-colors, "brainflix-black");
+  color: colors.$primaryDarkColor;
   text-decoration: none;
   @include mixins.tablet {
     font-size: 0.875rem;
@@ -45,7 +45,7 @@ h2 {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: map.get(colors.$primary-colors, "silver");
+  color: colors.$primaryColor;
 }
 h3,
 q {
@@ -68,7 +68,7 @@ p {
 label {
   font-size: 0.75rem;
   font-weight: 600;
-  color: map.get(colors.$primary-colors, "silver");
+  color: colors.$primaryColor;
   margin-bottom: 4px;
   text-transform: uppercase;
 }
@@ -79,14 +79,14 @@ input[type="search"] {
   font-family: "Avenir Next", "Avenir Next Pro";
   border-radius: 4px;
   overflow-y: hidden;
-  border: 1px solid map.get(colors.$secondary-colors, "mercury");
+  border: 1px solid colors.$secondaryColor;
   &:focus {
     outline: none;
-    border: 2px solid map.get(colors.$primary-colors, "brainflix-blue");
+    border: 1px solid colors.$primaryButtonColor;
   }
   &:active {
     outline: none;
-    border: 2px solid map.get(colors.$primary-colors, "brainflix-blue");
+    border: 1px solid colors.$primaryButtonColor;
   }
 }
 
@@ -97,11 +97,11 @@ input[type="button"] {
   text-align: center;
   text-transform: uppercase;
   border: none;
-  background-color: map.get(colors.$primary-colors, "brainflix-blue");
-  color: map.get(colors.$primary-colors, "white");
+  background-color: colors.$primaryButtonColor;
+  color: colors.$primaryColorLight;
   border-radius: 4px;
   &:hover {
-    background-color: map.get(colors.$secondary-colors, "brainflix-darkblue");
+    background-color: colors.$secondaryButtonDarkColor;
   }
   @include mixins.tablet {
     width: 9.5rem;
@@ -110,12 +110,12 @@ input[type="button"] {
 }
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: map.get(colors.$primary-colors, "brainflix-black");
+  color: colors.$primaryDarkColor;
   opacity: 1; /* Firefox */
 }
 
 hr {
-  border-bottom: 1px solid map.get(colors.$secondary-colors, "mercury");
+  border-bottom: 1px solid colors.$secondaryColor;
   border-bottom-width: 0;
   opacity: 50%;
   margin-bottom: 1rem;
@@ -142,7 +142,7 @@ hr {
     @include mixins.desktop {
       flex-direction: row;
       width: 70%;
-      border-right: 1px solid map.get(colors.$secondary-colors, "mercury");
+      border-right: 1px solid colors.$secondaryColor;
     }
   }
 }

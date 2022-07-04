@@ -1,16 +1,16 @@
 import React from "react";
 
 const CommentItem = (props) => {
-  function getDate(timestamp) {
+  const getDate = (timestamp) => {
     let date = new Date(timestamp);
     let fulldate =
       date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
     return fulldate;
-  }
+  };
   return (
     <li className="comment-section__item">
       <div>
-        <img className="comment-section__image"></img>
+        <img className="comment-section__image" alt=""></img>
       </div>
       <article className="comment-section__section">
         <div className="comment-section__detail">

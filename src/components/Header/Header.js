@@ -5,9 +5,10 @@ import searchIcon from "../../assets/icons/search.svg";
 import "./Header.scss";
 import upload from "../../assets/icons/upload.svg";
 const Header = () => {
+  let url = "";
   return (
     <header className="nav-bar nav-bar--wrapper">
-      <a>
+      <a href={url}>
         <img className="nav-bar__logo" src={logo} alt="BrainFlix logo" />
       </a>
       <div className="nav-bar__list">

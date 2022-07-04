@@ -1,15 +1,11 @@
 //Primary colors
-$primary-colors: (
-  "brainflix-black": #323232,
-  "brainflix-blue": #0095ff,
-  "silver": #afafaf,
-  "white": #ffffff,
-);
+$primaryColorLight: #ffffff;
+$primaryDarkColor: #323232;
+$primaryButtonColor: #0095ff;
+$primaryColor: #afafaf; //silver
 
-//Secondary colors
-$secondary-colors: (
-  "brainflix-darkblack": #000000,
-  "brainflix-darkblue": #0065ad,
-  "mercury": #e1e1e1,
-  "alabaster": #fafafa,
-);
+//Seconday colors
+$secondaryDarkColor: #000000;
+$secondaryButtonDarkColor: #0065ad;
+$secondaryColor: #e1e1e1; //Mercury
+$secondaryColorLight: #fafafa;

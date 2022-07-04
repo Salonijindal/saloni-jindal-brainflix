@@ -25,12 +25,11 @@ class App extends React.Component {
     const filteredVideos = this.state.videos.filter(
       (video) => video.id !== this.state.currentVideo.id
     );
-    console.log(this.state.currentVideo);
     return (
       <>
         <Header />
         <MainVideo currentVideo={this.state.currentVideo.image} />
-        <div className="main-section__container main-section__container--wrapper">
+        <main className="main-section__container main-section__container--wrapper">
           <div className="main-section__panel">
             <HeroVideo selectedVideo={this.state.currentVideo} />
             <CommentSection
@@ -39,7 +38,7 @@ class App extends React.Component {
             />
           </div>
           <Videos videos={filteredVideos} onClick={this.handleClick} />
-        </div>
+        </main>
       </>
     );
   }

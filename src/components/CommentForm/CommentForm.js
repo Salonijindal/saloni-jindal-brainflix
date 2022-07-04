@@ -5,7 +5,6 @@ import addComment from "../../assets/icons/add_comment.svg";
 const CommentForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted");
   };
   return (
     <div className="comment-section__container">

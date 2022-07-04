@@ -3,7 +3,6 @@ import CommentItem from "../CommentItem/CommentItem";
 
 const CommentList = (props) => {
   const commentList = props.commentList.comment;
-  console.log(props.commentList.id);
   return (
     <ul className="comment-section__list">
       {commentList.map((comment, index) => {

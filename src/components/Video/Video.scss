@@ -20,7 +20,7 @@
   }
 
   &__image {
-    background-color: map.get(colors.$primary-colors, "mercury");
+    background-color: colors.$secondaryColor;
     width: 110px;
     height: 4rem;
     background-size: cover;
