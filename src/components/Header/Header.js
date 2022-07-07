@@ -4,13 +4,14 @@ import avatar from "../../assets/images/mohan-muruge.jpg";
 import searchIcon from "../../assets/icons/search.svg";
 import "./Header.scss";
 import upload from "../../assets/icons/upload.svg";
+import { Link } from "react-router-dom";
 const Header = () => {
   let url = "";
   return (
     <header className="nav-bar nav-bar--wrapper">
-      <a href={url}>
+      <Link to="/">
         <img className="nav-bar__logo" src={logo} alt="BrainFlix logo" />
-      </a>
+      </Link>
       <div className="nav-bar__list">
         <div className="nav-bar__panel nav-bar__panel--wrapper">
           <img className="nav-bar__search" src={searchIcon} alt="Search Icon" />
