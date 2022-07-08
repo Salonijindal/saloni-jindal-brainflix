@@ -1,14 +1,14 @@
 import React from "react";
 import CommentItem from "../CommentItem/CommentItem";
 
-const CommentList = (props) => {
-  const commentList = props.commentList.comment;
+const CommentList = ({ commentList }) => {
   return (
     <ul className="comment-section__list">
       {commentList.map((comment, index) => {
         return (
           <CommentItem
-            key={`${props.commentList.id}${index}`}
+            key={`${commentList.id}${index}`}
+            id={`${commentList.id}${index}`}
             name={comment.name}
             comment={comment.comment}
             date={comment.timestamp}
