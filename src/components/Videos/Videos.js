@@ -14,7 +14,6 @@ const Videos = (props) => {
               title={video.title}
               image={video.image}
               channel={video.channel}
-              onClick={props.onClick}
             />
           );
         })}

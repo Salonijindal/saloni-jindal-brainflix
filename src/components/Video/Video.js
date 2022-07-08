@@ -1,18 +1,11 @@
 import React from "react";
 import "./Video.scss";
+import { NavLink } from "react-router-dom";
 
-const Video = ({ id, title, image, channel, onClick }) => {
-  const handleVideoSelected = (e) => {
-    e.preventDefault();
-    onClick(id);
-  };
+const Video = ({ id, title, image, channel }) => {
   return (
     <li className="video-section__card">
-      <a
-        href={`/video/${title}`}
-        onClick={handleVideoSelected}
-        className="video-section__link"
-      >
+      <NavLink to={`${id}`} className="video-section__link">
         <div>
           <img
             src={image}
@@ -24,7 +17,7 @@ const Video = ({ id, title, image, channel, onClick }) => {
           <h3 className="video-section__title">{title}</h3>
           <p className="video-section__content">{channel}</p>
         </div>
-      </a>
+      </NavLink>
     </li>
   );
 };
