@@ -67,36 +67,35 @@ class MainPage extends Component {
     }
   }
 
-  // handleClick = (videoId) => {
-  //   const selectedVideo = videoDetialsData.find(
-  //     (video) => video.id === videoId
-  //   );
-  //   this.setState({
-  //     currentVideo: selectedVideo,
-  //   });
-  // };
-
   render() {
-    // const filteredVideos = this.state.videos.filter(
-    //   (video) => video.id !== this.state.currentVideo.id
-    // );
     if (!this.state.currentVideo) {
       return <h1>Video loading....</h1>;
     }
 
+    const filteredVideos = this.state.videos.filter(
+      (video) => video.id !== this.state.currentVideo.id
+    );
+    console.log(filteredVideos);
+
     return (
       <>
-        <MainVideo currentVideo={this.state.currentVideo.image} />
-        <main className="main-section__container main-section__container--wrapper">
-          <section className="main-section__panel">
-            <HeroVideo selectedVideo={this.state.currentVideo} />
-            <CommentSection
-              comment={this.state.currentVideo.comments}
-              id={this.state.currentVideo.id}
-            />
-          </section>
-          <Videos videos={this.state.videos} />
-        </main>
+        {this.state.currentVideo ? (
+          <>
+            <MainVideo currentVideo={this.state.currentVideo.image} />
+            <main className="main-section__container main-section__container--wrapper">
+              <section className="main-section__panel">
+                <HeroVideo selectedVideo={this.state.currentVideo} />
+                <CommentSection
+                  comment={this.state.currentVideo.comments}
+                  id={this.state.currentVideo.id}
+                />
+              </section>
+              <Videos videos={filteredVideos} />
+            </main>
+          </>
+        ) : (
+          <h1>Videos Loading...</h1>
+        )}
       </>
     );
   }
