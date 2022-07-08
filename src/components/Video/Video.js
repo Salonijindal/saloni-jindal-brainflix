@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Video = ({ id, title, image, channel }) => {
   return (
     <li className="video-section__card">
-      <NavLink to={`${id}`} className="video-section__link">
+      <NavLink to={`videos/${id}`} className="video-section__link">
         <div>
           <img
             src={image}
