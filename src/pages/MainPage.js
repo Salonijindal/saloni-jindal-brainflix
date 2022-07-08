@@ -94,7 +94,7 @@ class MainPage extends Component {
             </main>
           </>
         ) : (
-          <h1>Videos Loading...</h1>
+          <h1>Videos Loading, please wait for a while...</h1>
         )}
       </>
     );
