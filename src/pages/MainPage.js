@@ -84,7 +84,14 @@ class MainPage extends Component {
             <MainVideo currentVideo={this.state.currentVideo.image} />
             <main className="main-section__container main-section__container--wrapper">
               <section className="main-section__panel">
-                <HeroVideo selectedVideo={this.state.currentVideo} />
+                <HeroVideo
+                  title={this.state.currentVideo.title}
+                  channel={this.state.currentVideo.channel}
+                  date={this.state.currentVideo.timestamp}
+                  views={this.state.currentVideo.views}
+                  likes={this.state.currentVideo.likes}
+                  description={this.state.currentVideo.description}
+                />
                 <CommentSection
                   comment={this.state.currentVideo.comments}
                   id={this.state.currentVideo.id}
