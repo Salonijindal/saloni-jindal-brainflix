@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Videos from "../components/Videos/Videos";
-import HeroVideo from "../components/HeroVideo/HeroVideo";
-import CommentSection from "../components/CommentSection/CommentSection";
-import MainVideo from "../components/MainVideo/MainVideo";
+import Videos from "../../components/Videos/Videos";
+import HeroVideo from "../../components/HeroVideo/HeroVideo";
+import CommentSection from "../../components/CommentSection/CommentSection";
+import MainVideo from "../../components/MainVideo/MainVideo";
 import axios from "axios";
-import { API_KEY, API_URl } from "../utils/utils";
+import { API_KEY, API_URl } from "../../utils/utils";
 
 class MainPage extends Component {
   state = {

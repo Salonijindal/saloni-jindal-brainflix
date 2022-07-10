@@ -27,17 +27,18 @@ const Header = () => {
           src={avatar}
           alt="BrainFlix User Avatar"
         />
-        <NavLink to="/upload">
-          <div className="nav-bar__button nav-bar__button--wrapper">
-            <img className="nav-bar__upload" src={upload} alt="Upload Icon" />
-            <input
-              type="button"
-              id="upload"
-              className="nav-bar__upload-input"
-              name="upload"
-              value="upload"
-            />
-          </div>
+        <NavLink
+          to="/upload"
+          className="nav-bar__button nav-bar__button--wrapper"
+        >
+          <img className="nav-bar__upload" src={upload} alt="Upload Icon" />
+          <input
+            type="button"
+            id="upload"
+            className="nav-bar__upload-input"
+            name="upload"
+            value="upload"
+          />
         </NavLink>
       </div>
     </header>

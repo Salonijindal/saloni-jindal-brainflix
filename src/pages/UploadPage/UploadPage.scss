@@ -1,0 +1,168 @@
+@use "../../App.scss";
+@use "../../styles/partials/colors";
+@use "sass:map";
+@use "../../styles/partials/mixins";
+
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  padding: 0 1rem 1.5rem;
+
+  &__panel {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 0;
+    border-top: 0;
+    border-bottom: 0;
+    @include mixins.tablet {
+      flex-direction: column;
+      border-top: 1px solid colors.$secondaryColor;
+      border-bottom: 1px solid colors.$secondaryColor;
+      padding: 1.5rem 0;
+    }
+    @include mixins.desktop {
+      flex-direction: row;
+      column-gap: 1.5rem;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    row-gap: 1.5rem;
+    @include mixins.tablet {
+      flex-direction: column;
+      column-gap: 1.3rem;
+    }
+  }
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: 100%;
+    @include mixins.tablet {
+      flex-direction: column;
+      column-gap: 1.3rem;
+    }
+  }
+  &__thumbnail {
+    height: 170px;
+    width: 100%;
+    background-color: colors.$secondaryColor;
+    border-radius: 4px;
+    @include mixins.tablet {
+      width: 350px;
+    }
+    @include mixins.tablet {
+    }
+  }
+  &__input {
+    display: flex;
+    flex-direction: column;
+    @include mixins.tablet {
+      width: 100%;
+    }
+  }
+  &__image {
+    display: flex;
+    flex-direction: column;
+    @include mixins.tablet {
+      width: 100%;
+    }
+    @include mixins.tablet {
+      width: fit-content;
+    }
+  }
+  &__input-area {
+    height: 2rem;
+    padding: 0.875rem;
+    width: 100%;
+    @include mixins.tablet {
+      height: 2.6rem;
+      padding: 1rem;
+    }
+  }
+  &__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    &--wrapper {
+      position: relative;
+      order: 0;
+
+      @include mixins.tablet {
+        width: 150px;
+        order: 2;
+      }
+    }
+
+    @include mixins.tablet {
+      width: 150px;
+    }
+  }
+
+  &__publish {
+    position: absolute;
+    padding: 0.5rem 1rem;
+    height: 35px;
+    padding: 8px 12px;
+    @include mixins.tablet {
+      margin-top: 1.2rem;
+    }
+  }
+  &__upload-input {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 4px;
+    border: 1px solid colors.$secondaryColor;
+    &--cancel {
+      background-color: white;
+    }
+    @include mixins.tablet {
+      margin-top: 1.2rem;
+      padding-left: 1rem;
+    }
+  }
+
+  &__textarea {
+    height: 4.5rem;
+    resize: none;
+    padding: 0.875rem;
+    &--error {
+      border-color: #d22d2d;
+    }
+    @include mixins.tablet {
+      height: 5.8rem;
+      padding: 1rem;
+    }
+  }
+  &__button-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: flex-end;
+    @include mixins.tablet {
+      flex-direction: row;
+      height: 40px;
+      justify-content: flex-end;
+      column-gap: 1rem;
+    }
+  }
+  @include mixins.tablet {
+    padding: 0 2.25rem 2rem;
+  }
+  @include mixins.desktop {
+    padding: 0;
+    &--wrapper {
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+  }
+}
+#cancel {
+  background-color: colors.$primaryColorLight;
+  color: colors.$primaryButtonColor;
+}

@@ -102,7 +102,7 @@
     resize: none;
     padding: 12px;
     &--error {
-      border-color: #d22d2d !important;
+      border-color: #d22d2d;
     }
     @include mixins.tablet {
       height: 40px;

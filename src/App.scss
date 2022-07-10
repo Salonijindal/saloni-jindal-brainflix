@@ -89,7 +89,8 @@ input[type="search"] {
   }
 }
 
-input[type="button"] {
+input[type="button"],
+input[type="submit"] {
   font-size: 0.75rem;
   height: 40px;
   width: 100%;
