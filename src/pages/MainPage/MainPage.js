@@ -16,7 +16,6 @@ class MainPage extends Component {
   componentDidMount() {
     //Gettin Current Video Id from URl
     const currentVideoId = this.props.match.params.id;
-    console.log("Vidoe ID from URL", this.props.match.params.id);
 
     axios
       .get(`${API_URl}/videos?api_key=${API_KEY}`)
@@ -40,32 +39,25 @@ class MainPage extends Component {
       })
       .catch((err) => {
         this.setState({ isError: true });
-        console.log("Error in retrieving video data from url");
       });
   }
   componentDidUpdate(prevVal) {
     const prevVideoId = prevVal.match.params.id;
-    console.log(this.props.match);
     const currentVideoId = this.props.match.params.id;
 
     const videoIdToFetch = currentVideoId
       ? currentVideoId
       : this.state.videos[0].id;
-    console.log("Vidoe ID from Home Page", videoIdToFetch);
     if (prevVideoId !== currentVideoId) {
       axios
         .get(`${API_URl}/videos/${videoIdToFetch}?api_key=${API_KEY}`)
         .then((videoDetails) => {
-          console.log("Video details:-----", videoDetails.data);
           this.setState({
             currentVideo: videoDetails.data,
           });
-          console.log(this.state.currentVideo.videoDetails.data);
         })
         .catch((err) => {
-          console.log(
-            "Compount did update in Error in retrieving video data from url"
-          );
+          this.setState({ isError: true });
         });
     }
   }
