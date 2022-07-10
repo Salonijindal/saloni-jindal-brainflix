@@ -145,4 +145,12 @@ hr {
       border-right: 1px solid colors.$secondaryColor;
     }
   }
+  &__error-page {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    color: #d22d2d;
+    text-align: center;
+  }
 }

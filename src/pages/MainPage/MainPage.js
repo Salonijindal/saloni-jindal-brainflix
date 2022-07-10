@@ -5,11 +5,13 @@ import CommentSection from "../../components/CommentSection/CommentSection";
 import MainVideo from "../../components/MainVideo/MainVideo";
 import axios from "axios";
 import { API_KEY, API_URl } from "../../utils/utils";
+import { NavLink } from "react-router-dom";
 
 class MainPage extends Component {
   state = {
     videos: [],
     currentVideo: null,
+    isError: false,
   };
   componentDidMount() {
     //Gettin Current Video Id from URl
@@ -37,6 +39,7 @@ class MainPage extends Component {
         });
       })
       .catch((err) => {
+        this.setState({ isError: true });
         console.log("Error in retrieving video data from url");
       });
   }
@@ -68,14 +71,11 @@ class MainPage extends Component {
   }
 
   render() {
-    if (!this.state.currentVideo) {
-      return <h1>Video loading....</h1>;
-    }
-
-    const filteredVideos = this.state.videos.filter(
-      (video) => video.id !== this.state.currentVideo.id
-    );
-    console.log(filteredVideos);
+    const filteredVideos = this.state.currentVideo
+      ? this.state.videos.filter(
+          (video) => video.id !== this.state.currentVideo.id
+        )
+      : [];
 
     return (
       <>
@@ -100,8 +100,23 @@ class MainPage extends Component {
               <Videos videos={filteredVideos} />
             </main>
           </>
+        ) : this.state.isError ? (
+          <div className="main-section__error-page">
+            <h1>Error...</h1>
+            <NavLink to="/" className="main-section__button">
+              <input
+                type="button"
+                id="error"
+                className="main-section__error-input"
+                name="error"
+                value="Go Back"
+              />
+            </NavLink>
+          </div>
         ) : (
-          <h1>Videos Loading, please wait for a while...</h1>
+          <h1 className="main-section__error-page">
+            Videos Loading, please wait for a while...
+          </h1>
         )}
       </>
     );
