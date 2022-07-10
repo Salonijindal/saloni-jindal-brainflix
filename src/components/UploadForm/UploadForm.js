@@ -6,7 +6,7 @@ import ImageThumbnail from "../../assets/images/Upload-video-preview.jpg";
 const UploadForm = () => {
   let history = useHistory();
   const handleSubmit = (e) => {
-    alert("Your video has been submitted");
+    alert("Your video has been submitted!");
     history.push("/");
   };
   return (
