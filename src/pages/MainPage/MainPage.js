@@ -21,7 +21,6 @@ class MainPage extends Component {
     axios
       .get(`${SERVER_URL}/videos`)
       .then((response) => {
-        console.log(response);
         const videos = response.data;
         const firstVideoId = response.data[0].id;
 

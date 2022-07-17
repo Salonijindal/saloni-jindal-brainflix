@@ -35,7 +35,6 @@ class UploadForm extends Component {
     this.setState({
       [name]: e.target.value,
     });
-    console.log(this.state);
   };
 
   componentDidMount() {}
