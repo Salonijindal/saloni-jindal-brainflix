@@ -4,7 +4,6 @@ import HeroVideo from "../../components/HeroVideo/HeroVideo";
 import CommentSection from "../../components/CommentSection/CommentSection";
 import MainVideo from "../../components/MainVideo/MainVideo";
 import axios from "axios";
-import { API_KEY, API_URl } from "../../utils/utils";
 import { NavLink } from "react-router-dom";
 
 const SERVER_URL = process.env.REACT_APP_SERVER_URL;
@@ -22,7 +21,6 @@ class MainPage extends Component {
     axios
       .get(`${SERVER_URL}/videos`)
       .then((response) => {
-        console.log(response);
         const videos = response.data;
         const firstVideoId = response.data[0].id;
 
@@ -33,7 +31,7 @@ class MainPage extends Component {
         return currentVideoId ? currentVideoId : firstVideoId;
       })
       .then((videoId) => {
-        return axios.get(`${API_URl}/videos/${videoId}?api_key=${API_KEY}`);
+        return axios.get(`${SERVER_URL}/videos/${videoId}`);
       })
       .then((videoDetails) => {
         this.setState({
@@ -53,7 +51,7 @@ class MainPage extends Component {
       : this.state.videos[0].id;
     if (prevVideoId !== currentVideoId) {
       axios
-        .get(`${API_URl}/videos/${videoIdToFetch}?api_key=${API_KEY}`)
+        .get(`${SERVER_URL}/videos/${videoIdToFetch}`)
         .then((videoDetails) => {
           this.setState({
             currentVideo: videoDetails.data,
