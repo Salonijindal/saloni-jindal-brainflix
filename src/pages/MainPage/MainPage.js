@@ -7,6 +7,8 @@ import axios from "axios";
 import { API_KEY, API_URl } from "../../utils/utils";
 import { NavLink } from "react-router-dom";
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 class MainPage extends Component {
   state = {
     videos: [],
@@ -18,8 +20,9 @@ class MainPage extends Component {
     const currentVideoId = this.props.match.params.id;
 
     axios
-      .get(`${API_URl}/videos?api_key=${API_KEY}`)
+      .get(`${SERVER_URL}/videos`)
       .then((response) => {
+        console.log(response);
         const videos = response.data;
         const firstVideoId = response.data[0].id;
 
