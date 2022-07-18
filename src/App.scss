@@ -10,7 +10,7 @@
 }
 body {
   margin: 0;
-  font-family: "Avenir Next", "San Seriff";
+  font-family: "AvenirNext LT Pro", "San Seriff";
 }
 a {
   font-size: 0.812rem;
@@ -33,7 +33,7 @@ p {
 }
 h1 {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   @include mixins.tablet {
     font-size: 2.0625rem;
   }
@@ -43,13 +43,13 @@ h1 {
 }
 h2 {
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   color: colors.$primaryColor;
 }
 h3 {
   font-size: 0.812rem;
-  font-weight: 600;
+  font-weight: 700;
   @include mixins.tablet {
     font-size: 0.875rem;
   }
@@ -66,7 +66,7 @@ p {
 }
 label {
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   color: colors.$primaryColor;
   margin-bottom: 4px;
   text-transform: uppercase;

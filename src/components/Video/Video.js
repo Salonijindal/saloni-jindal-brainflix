@@ -1,14 +1,14 @@
 import React from "react";
 import "./Video.scss";
 import { NavLink } from "react-router-dom";
-
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 const Video = ({ id, title, image, channel }) => {
   return (
     <li className="video-section__card">
       <NavLink to={`/videos/${id}`} className="video-section__link">
         <div>
           <img
-            src={image}
+            src={`${SERVER_URL}/${image}`}
             className="video-section__image"
             alt={`${title}`}
           ></img>
